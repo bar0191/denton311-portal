@@ -89,12 +89,14 @@ section.screenshots {
     &:before {
       font-size: 25px;
       color: $gray-dark;
+      content: url(https://www.cityofdenton.com/CoD/media/City-of-Denton/Assets/Right-Arrow-gray.svg);
     }
   }
   .slick-prev {
     &:before {
       font-size: 25px;
       color: $gray-dark;
+      content: url(https://www.cityofdenton.com/CoD/media/City-of-Denton/Assets/Left-Arrow-gray.svg);
     }
   }
   .pic {

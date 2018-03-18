@@ -186,10 +186,12 @@ section.screenshots {
       margin-bottom: 0; }
   section.screenshots .slick-next:before {
     font-size: 25px;
-    color: #333333; }
+    color: #333333;
+    content: url(https://www.cityofdenton.com/CoD/media/City-of-Denton/Assets/Right-Arrow-gray.svg); }
   section.screenshots .slick-prev:before {
     font-size: 25px;
-    color: #333333; }
+    color: #333333;
+    content: url(https://www.cityofdenton.com/CoD/media/City-of-Denton/Assets/Left-Arrow-gray.svg); }
   section.screenshots .pic {
     width: 240px;
     padding: 0 10px;
