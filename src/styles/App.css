@@ -201,7 +201,8 @@ section.screenshots {
 
 .App-title {
   color: #eeac01;
-  font-weight: 400; }
+  font-weight: 400;
+  text-align: center; }
 
 .content-container {
   width: 100%;
