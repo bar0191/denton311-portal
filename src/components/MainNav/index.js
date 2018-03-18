@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, Collapse, NavLink } from 'reactstrap';
+
 import { Container } from 'reactstrap';
 import Logo from '../../images/City-of-Denton-Type-Stacked.svg';
 

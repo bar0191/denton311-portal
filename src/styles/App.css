@@ -1,3 +1,5 @@
+@import url(~slick-carousel/slick/slick.css);
+@import url(~slick-carousel/slick/slick-theme.css);
 .bg-primary {
   background: #eeac01;
   background: -webkit-linear-gradient(#eeac01, #d59a01);
@@ -24,6 +26,18 @@
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif' !important;
   letter-spacing: 2px !important;
   text-transform: uppercase !important; }
+
+.btn-md {
+  font-size: 12px !important;
+  margin: 5px !important;
+  padding: 15px 25px !important;
+  color: #eeac01;
+  border: 1px solid !important;
+  border-color: #eeac01 !important; }
+  .btn-md:hover, .btn-md:focus, .btn-md:active, .btn-md.active {
+    color: white;
+    border-color: #eeac01 !important;
+    background-color: #eeac01; }
 
 .btn-xl {
   font-size: 11px !important;
@@ -140,8 +154,48 @@
       .homehead .device-container {
         max-width: 325px; } }
 
-.App {
-  text-align: center; }
+section.features {
+  width: 100%; }
+  section.features .section-heading {
+    margin-bottom: 100px; }
+    section.features .section-heading h2 {
+      margin-top: 0; }
+    section.features .section-heading p {
+      margin-bottom: 0; }
+  section.features .block-titles {
+    color: rgba(0, 0, 32, 0.9);
+    font-weight: 400;
+    overflow-wrap: break-word;
+    font-size: 24px;
+    line-height: 30px; }
+  @media (max-width: 788px) {
+    section.features .block {
+      width: 100%;
+      border-right: 0 !important;
+      border-bottom: 1px solid rgba(209, 210, 211, 0.3);
+      padding: 24px; } }
+
+section.screenshots {
+  width: 100%;
+  background-color: #eee; }
+  section.screenshots .section-heading {
+    margin-bottom: 100px; }
+    section.screenshots .section-heading h2 {
+      margin-top: 0; }
+    section.screenshots .section-heading p {
+      margin-bottom: 0; }
+  section.screenshots .slick-next:before {
+    font-size: 25px;
+    color: #333333; }
+  section.screenshots .slick-prev:before {
+    font-size: 25px;
+    color: #333333; }
+  section.screenshots .pic {
+    width: 240px;
+    padding: 0 10px;
+    outline: none;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
 
 .App-title {
   color: #eeac01;

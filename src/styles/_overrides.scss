@@ -36,6 +36,23 @@
   @include alt-font;
 }
 
+.btn-md {
+  font-size: 12px !important;
+  margin: 5px !important;
+  padding: 15px 25px !important;
+  color: $theme-primary;
+  border: 1px solid !important;
+  border-color: $theme-primary !important;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: white;
+    border-color: $theme-primary !important;
+    background-color: $theme-primary;
+  }
+}
+
 .btn-xl {
   font-size: 11px !important;
   padding: 15px 45px !important;
