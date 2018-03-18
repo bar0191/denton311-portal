@@ -1,0 +1,21 @@
+@import "variables";
+@import "mixins";
+@import "overrides";
+@import "mainNav";
+@import "home";
+
+.App {
+  text-align: center;
+}
+
+.App-title {
+  color: #eeac01;
+  font-weight: 400;
+}
+.content-container {
+  width: 100%;
+  transform: translate(0,0);
+  position: relative;
+}
+
+

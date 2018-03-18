@@ -1,0 +1,153 @@
+.bg-primary {
+  background: #eeac01;
+  background: -webkit-linear-gradient(#eeac01, #d59a01);
+  background: linear-gradient(#eeac01, #d59a01); }
+
+.text-primary {
+  color: #eeac01; }
+
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+
+.btn-outline {
+  color: white;
+  border: 1px solid !important;
+  border-color: white !important; }
+  .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
+    color: white;
+    border-color: #eeac01 !important;
+    background-color: #eeac01; }
+
+.btn {
+  border-radius: 300px !important;
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif' !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important; }
+
+.btn-xl {
+  font-size: 11px !important;
+  padding: 15px 45px !important; }
+
+#mainNav {
+  padding: 15px 50px;
+  border-color: rgba(34, 34, 34, 0.05);
+  background-color: white;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif' !important;
+  font-weight: 200 !important;
+  letter-spacing: 1px !important; }
+  #mainNav .navbar-brand {
+    color: #eeac01;
+    font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif' !important;
+    font-weight: 200 !important;
+    letter-spacing: 1px !important; }
+    #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+      color: #bb8701; }
+  #mainNav .navbar-toggler {
+    font-size: 12px;
+    padding: 8px 10px;
+    color: #222222; }
+  #mainNav .navbar-nav > li > a {
+    font-size: 11px;
+    font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif' !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important; }
+    #mainNav .navbar-nav > li > a.active {
+      color: #eeac01 !important;
+      background-color: transparent; }
+      #mainNav .navbar-nav > li > a.active:hover {
+        background-color: transparent; }
+  #mainNav .navbar-nav > li > a,
+  #mainNav .navbar-nav > li > a:focus {
+    color: #222222; }
+    #mainNav .navbar-nav > li > a:hover,
+    #mainNav .navbar-nav > li > a:focus:hover {
+      color: #eeac01; }
+  @media (min-width: 992px) {
+    #mainNav {
+      border-color: transparent;
+      background-color: transparent; }
+      #mainNav .navbar-brand {
+        color: fade(white, 70%); }
+        #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+          color: white; }
+      #mainNav .navbar-nav > li > a,
+      #mainNav .navbar-nav > li > a:focus {
+        color: rgba(255, 255, 255, 0.7); }
+        #mainNav .navbar-nav > li > a:hover,
+        #mainNav .navbar-nav > li > a:focus:hover {
+          color: white; }
+      #mainNav .nav-link > a,
+      #mainNav .nav-link > a:focus {
+        color: rgba(255, 255, 255, 0.7); }
+        #mainNav .nav-link > a:hover,
+        #mainNav .nav-link > a:focus:hover {
+          color: white;
+          text-decoration: none; }
+      #mainNav.navbar-shrink {
+        border-color: rgba(34, 34, 34, 0.1);
+        background-color: white; }
+        #mainNav.navbar-shrink .navbar-brand {
+          color: #222222; }
+          #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
+            color: #eeac01; }
+        #mainNav.navbar-shrink .nav-link > a,
+        #mainNav.navbar-shrink .nav-link > a:focus {
+          color: #222222; }
+          #mainNav.navbar-shrink .nav-link > a:hover,
+          #mainNav.navbar-shrink .nav-link > a:focus:hover {
+            color: #eeac01; }
+        #mainNav.navbar-shrink .navbar-nav > li > a,
+        #mainNav.navbar-shrink .navbar-nav > li > a:focus {
+          color: #222222; }
+          #mainNav.navbar-shrink .navbar-nav > li > a:hover,
+          #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
+            color: #eeac01; } }
+
+.homehead {
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: white;
+  background: url("../images/bg-pattern.png"), #4f4380; }
+  .homehead .header-content {
+    max-width: 500px;
+    margin-bottom: 100px;
+    text-align: center; }
+    .homehead .header-content h1 {
+      font-size: 45px !important; }
+  .homehead .device-container {
+    max-width: 325px;
+    margin-right: auto;
+    margin-left: auto; }
+    .homehead .device-container .screen img {
+      border-radius: 3px; }
+  @media (min-width: 992px) {
+    .homehead {
+      height: 100vh;
+      min-height: 775px;
+      padding-top: 0;
+      padding-bottom: 0; }
+      .homehead .header-content {
+        margin-bottom: 0;
+        text-align: left; }
+        .homehead .header-content h1 {
+          font-size: 50px; }
+      .homehead .device-container {
+        max-width: 325px; } }
+
+.App {
+  text-align: center; }
+
+.App-title {
+  color: #eeac01;
+  font-weight: 400; }
+
+.content-container {
+  width: 100%;
+  transform: translate(0, 0);
+  position: relative; }
