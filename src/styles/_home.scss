@@ -107,3 +107,54 @@ section.screenshots {
     transition: all 0.3s ease 0s;
   }
 }
+
+section.contact {
+  width: 100%;
+  background: linear-gradient(#fdcc52,#fdc539);
+  .section-heading {
+    margin-bottom: 100px;
+    h2 {
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .contact-form {
+    padding: 0 150px;
+    @media (max-width: 992px) {
+      padding: 0;
+    }
+    .input-message {
+      background: transparent;
+      border-radius: 10px;
+      color: #333;
+      font-size: 15px;
+      border: 1px solid #333;
+      height: 135px;
+      margin-bottom: 24px;
+    }
+    .input-fields {
+      background: transparent;
+      border-radius: 10px;
+      color: #333;
+      font-size: 15px;
+      border: 1px solid #333;
+      height: 50px;
+      margin-bottom: 24px;
+    }
+    .btn-outline {
+      color: #333;
+      border: 1px solid !important;
+      border-color: #333 !important;
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        color: #333;
+        border-color: #f3f3f3 !important;
+        background-color: #f3f3f3;
+      }
+    }
+  }
+}
