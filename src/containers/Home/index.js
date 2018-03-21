@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/device.css';
 import mainAppScreen from '../../images/mainAppScreen.png';
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import AppleIcon from 'react-icons/lib/fa/apple';
 import AndroidIcon from 'react-icons/lib/fa/android';
 import QRCode from '../../images/QRCode.png';
@@ -172,6 +172,51 @@ export default class Home extends React.Component {
                 <img className="img-fluid" src={ReportScreen} />
               </div>
             </Slider>
+          </Container>
+        </section>
+
+        <section className="contact" id="contact">
+          <Container style={{width: '100%'}}>
+            <div className="section-heading text-center">
+              <h2>Get In Touch</h2>
+              <hr/>
+            </div>
+            <Form className="contact-form">
+              <FormGroup>
+                <Label for="contactName" hidden>Name</Label>
+                <Input
+                  className="input-fields"
+                  type="name"
+                  name="name"
+                  id="contactName"
+                  placeholder="Name"
+                  bsSize="lg" />
+              </FormGroup>
+              {' '}
+              <FormGroup>
+                <Label for="contactEmail" hidden>Email</Label>
+                <Input
+                  className="input-fields"
+                  type="email"
+                  name="email"
+                  id="exampleEmail"
+                  placeholder="Email"
+                  bsSize="lg" />
+              </FormGroup>
+              {' '}
+              <FormGroup>
+                <Label for="contactMessage" hidden>Message</Label>
+                <Input
+                  className="input-message"
+                  type="textarea"
+                  name="text"
+                  placeholder="Message"
+                  id="exampleText"
+                  bsSize="lg" />
+              </FormGroup>
+              {' '}
+              <a href="#" className="btn btn-outline btn-xl">submit</a>
+            </Form>
           </Container>
         </section>
 
