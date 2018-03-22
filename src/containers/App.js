@@ -6,6 +6,7 @@ import Home from './Home';
 import Reports from './Reports';
 import Footer from '../components/Footer';
 import Fire from '../utils/fire';
+import * as firebase from 'firebase';
 
 export default class App extends Component {
   constructor(props) {
@@ -26,7 +27,7 @@ export default class App extends Component {
         // ...
       } else {
         // user is logged out somehow, sign them back in
-        Fire.auth().setPersistence(Fire.auth.Auth.Persistence.LOCAL)
+        Fire.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
           .then(function() {
             // Existing and future Auth states are now persisted in the device
             // local storage.
