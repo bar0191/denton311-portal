@@ -6,6 +6,10 @@
   padding: 10px 15px;
   border-bottom: 1px solid #ddd;
   align-items: center;
+  &:hover {
+    background-color: #f3f3f3;
+    cursor: pointer;
+  }
 }
 
 .report-card {
@@ -18,4 +22,8 @@
     width: auto;
     margin-bottom: 56px;
   }
+}
+
+.scrollbar-container {
+  z-index: 0;
 }

@@ -246,6 +246,9 @@ section.contact {
   padding: 10px 15px;
   border-bottom: 1px solid #ddd;
   align-items: center; }
+  .item-container:hover {
+    background-color: #f3f3f3;
+    cursor: pointer; }
 
 .report-card {
   height: 750px;
@@ -257,6 +260,9 @@ section.contact {
       margin: 50px auto;
       width: auto;
       margin-bottom: 56px; } }
+
+.scrollbar-container {
+  z-index: 0; }
 
 .main-head {
   position: relative;

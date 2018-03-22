@@ -4,20 +4,30 @@ import { Card, Container, Row, Col } from 'reactstrap';
 import ScrollArea from 'react-scrollbar';
 import moment from 'moment';
 import Header from '../../components/Header';
+import ReportsModal from '../../components/ReportsModal';
 
-export default class Report extends React.Component {
+export default class Reports extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       reports: [],
       status: true,
+      modal: false,
+      modalReport: ' ',
     }
   }
 
   componentDidMount() {
     this.getLatest100Reports();
   }
+
+  toggleReportModal = (report) => {
+    this.setState({
+      modalReport: report,
+      modal: !this.state.modal
+    });
+  };
 
   getLatest100Reports() {
     return Fire.database().ref().child('reports').limitToLast(200).on('value', (snapshot) => {
@@ -42,6 +52,8 @@ export default class Report extends React.Component {
       }
     };
 
+    const externalCloseBtn = <button className="close" style={{ position: 'absolute', top: '15px', right: '15px' }} onClick={this.toggleReportModal}>&times;</button>;
+
     return (
       <div>
         <Header headerTitle="Reports"/>
@@ -53,7 +65,7 @@ export default class Report extends React.Component {
                   report.submitPublicly ?
                     <div
                       key={index}
-                      onClick={() => { }}
+                      onClick={() => {this.toggleReportModal(report)}}
                     >
                       <div className="item-container">
                         <div>
@@ -76,6 +88,7 @@ export default class Report extends React.Component {
               </div>
             </ScrollArea>
           </Card>
+          <ReportsModal extBtn={externalCloseBtn} report={this.state.modalReport} isOpen={this.state.modal} toggle={this.toggleReportModal}/>
         </Container>
       </div>
     );
