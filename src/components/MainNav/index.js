@@ -18,7 +18,7 @@ export default class MainNav extends React.Component {
 
     return (
       <div className="container">
-      <Navbar id="mainNav" fixed="top" color="faded" light expand="lg">
+      <Navbar fixed="top" id="mainNav" color="faded" light expand="lg">
         <NavbarBrand className="brand" href="/">Denton 311</NavbarBrand>
         <NavbarToggler className="toggler" onClick={this.props.toggleNav} />
         <Collapse isOpen={this.props.open} navbar>
