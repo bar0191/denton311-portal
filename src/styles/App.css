@@ -238,6 +238,49 @@ section.contact {
         border-color: #f3f3f3 !important;
         background-color: #f3f3f3; }
 
+.item-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  flex: 1;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  align-items: center; }
+
+.report-card {
+  height: 750px;
+  max-width: 600px;
+  margin: 50px 255px; }
+  @media (max-width: 992px) {
+    .report-card {
+      height: 750px;
+      margin: 50px auto;
+      width: auto;
+      margin-bottom: 56px; } }
+
+.main-head {
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  color: white;
+  background: url("../images/bg-pattern.png"), #4f4380;
+  text-align: center; }
+  .main-head .header-content {
+    max-width: 500px;
+    margin-bottom: 0; }
+  @media (min-width: 992px) {
+    .main-head {
+      height: 200px;
+      min-height: 200px;
+      padding-top: 0;
+      padding-bottom: 0; }
+      .main-head .header-content {
+        margin-bottom: 0;
+        text-align: center; }
+        .main-head .header-content h1 {
+          font-size: 45px !important; } }
+
 .App-title {
   color: #eeac01;
   font-weight: 400;

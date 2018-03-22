@@ -1,0 +1,21 @@
+.item-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  flex: 1;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.report-card {
+  height: 750px;
+  max-width: 600px;
+  margin: 50px 255px;
+  @media (max-width: 992px) {
+    height: 750px;
+    margin: 50px auto;
+    width: auto;
+    margin-bottom: 56px;
+  }
+}
