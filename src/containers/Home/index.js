@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import '../../styles/device.css';
 import mainAppScreen from '../../images/mainAppScreen.png';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
@@ -10,15 +11,20 @@ import ReportListScreen from '../../images/ReportList.png';
 import ReportMapScreen from '../../images/ReportMap.png';
 import ReportScreen from '../../images/Report.png';
 import Slider from 'react-slick';
+import GPSSvg from '../../images/gps.svg';
+import TimeSvg from '../../images/time.svg';
+import CameraSvg from '../../images/photo-camera.svg';
 
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {
-
-  }
+  handleScrollToElement = (e) => {
+    e.preventDefault();
+    const tesNode = ReactDOM.findDOMNode(this.refs.test);
+    window.scrollTo(0, tesNode.offsetTop);
+  };
 
   render() {
     let settings = {
@@ -51,9 +57,6 @@ export default class Home extends React.Component {
             slidesToScroll: 1
           }
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
       ]
     };
 
@@ -68,7 +71,7 @@ export default class Home extends React.Component {
                   <h1 className="mb-5">
                     <em className="App-title">Denton 311</em> is an initiative made by students at UNT to jump start non-emergency services in the City of Denton. This app is currently in development and seeking users to test it!
                   </h1>
-                  <a href="#" className="btn btn-outline btn-xl">Get started now!</a>
+                  <a href="#" onClick={this.handleScrollToElement} className="btn btn-outline btn-xl">Check it out!</a>
                 </div>
               </Col>
               <Col lg="5" className="my-auto">
@@ -89,13 +92,10 @@ export default class Home extends React.Component {
           </Container>
         </header>
 
-        <section className="features" id="features">
+        <section ref="test" className="features" id="features">
           <Container style={{width: '100%'}}>
             <div className="section-heading text-center">
-              <h2>Get Started, and Help Make This App Better</h2>
-              <p className="text-muted">
-                Follow these easy steps to get started with the Expo Client, while we are getting the app ready for production on GooglePlay and the App Store.
-              </p>
+              <h2>App Features</h2>
               <hr/>
             </div>
             <Row>
@@ -105,17 +105,9 @@ export default class Home extends React.Component {
                 md="4"
               >
                 <div>
-                  <h2 className="block-titles" style={{color: 'rgba(0, 0, 32, 0.3)'}}>01</h2>
-                  <h2 className="block-titles">Install Expo Client on your device</h2>
-                  <p>Expo Client is a host app which runs the project in development before  publishing to the app store.</p>
-                  <div>
-                    <a href="#" className="btn btn-outline btn-md">
-                      <AppleIcon style={{marginBottom: 4}} size="16"/> iOS
-                    </a>
-                    <a href="#" className="btn btn-outline btn-md">
-                      <AndroidIcon style={{marginBottom: 4}} size="16"/> Android
-                    </a>
-                  </div>
+                  <img src={GPSSvg} style={{width: '100%', height: 95, marginBottom: 25 }} alt=""/>
+                  <h2 style={{textAlign: 'center', fontSize: 30}} className="block-titles">GPS/Geocoding</h2>
+                  <p style={{textAlign: 'center'}}>You can select your location using Google Maps API.</p>
                 </div>
               </Col>
               <Col
@@ -123,12 +115,10 @@ export default class Home extends React.Component {
                 style={{ borderRight: '1px solid rgba(209, 210, 211, 0.3)'}}
                 md="4"
               >
-                <h2 className="block-titles" style={{color: 'rgba(0, 0, 32, 0.3)'}}>02</h2>
-                <h2 className="block-titles">Scan the projects QR code</h2>
-                <p>Scan this QR code with your Expo mobile app to load the project immediately.</p>
-                <img src={QRCode} style={{width: 200, height: 200}} alt=""/>
                 <div>
-
+                  <img src={TimeSvg} style={{width: '100%', height: 95, marginBottom: 25 }} alt=""/>
+                  <h2 style={{textAlign: 'center', fontSize: 30}} className="block-titles">Real-Time Data</h2>
+                  <p style={{textAlign: 'center'}}>Reports are updated on all devices in real-time.</p>
                 </div>
               </Col>
               <Col
@@ -136,11 +126,10 @@ export default class Home extends React.Component {
                 md="4"
                 style={{borderBottom: 0}}
               >
-                <h2 className="block-titles" style={{color: 'rgba(0, 0, 32, 0.3)'}}>03</h2>
-                <h2 className="block-titles">Start reporting!</h2>
-                <p>Once the app is loaded play with it, submit some reports, and please be sure to give us some feedback on your experience.</p>
                 <div>
-
+                  <img src={CameraSvg} style={{width: '100%', height: 95, marginBottom: 25 }} alt=""/>
+                  <h2 style={{textAlign: 'center', fontSize: 30}} className="block-titles">Photo/Video Sharing</h2>
+                  <p style={{textAlign: 'center'}}>share up to 3 photos/videos.</p>
                 </div>
               </Col>
             </Row>
@@ -151,8 +140,6 @@ export default class Home extends React.Component {
           <Container style={{width: '100%'}}>
             <div className="section-heading text-center">
               <h2>App Screenshots</h2>
-              <p className="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis unde, ut sapiente et voluptatum facilis consectetur incidunt provident asperiores at necessitatibus nulla sequi voluptas libero quasi explicabo veritatis minima porro.              </p>
               <hr/>
             </div>
             <Slider {...settings}>
