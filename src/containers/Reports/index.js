@@ -86,7 +86,7 @@ export default class Reports extends React.Component {
         <Container>
           <Dropdown style={{ marginTop: 25, marginLeft: 75}} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
               <DropdownToggle caret>
-                  Dropdown
+                  Filter
               </DropdownToggle>
               <DropdownMenu>
                 <DropdownItem onClick={() => this.getFilterData('', false)}>
